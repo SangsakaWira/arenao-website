@@ -1,0 +1,25 @@
+<section class="section b-b">
+    <div class="container">
+        <div class="section-heading">
+            <h2 id="examples">Text color</h2>
+        </div>
+
+        <p class="b-b pb-2 mb-5 text-secondary">Bootstrap default</p>
+        <div class="row gap-y">
+            {% for color in colors.text -%}
+            <div class="col-6 col-md-3">
+                <p class="text-{{ color.name }} bg-{{ color.bg }} p-3">.text-{{ color.name }}</p>
+            </div>
+            {%- endfor %}
+        </div>
+
+        <p class="b-b pb-2 my-5 text-secondary">Dashcore color scheme</p>
+        <div class="row gap-y">
+            {% for color in colors.theme -%}
+            <div class="col-6 col-md-3">
+                <p class="color-{{ color.name }} bg-{{ color.text }} p-3">.color-{{ color.name }}</p>
+            </div>
+            {%- endfor %}
+        </div>
+    </div>
+</section>

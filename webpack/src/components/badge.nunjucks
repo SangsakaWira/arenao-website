@@ -1,0 +1,24 @@
+{% extends "~layout/components.nunjucks" %}
+
+{% set baseUrl = { path: "../", img: "img", blog: "blog/", components: "components/", blocks: "blocks/" } %}
+
+{% set page = {
+    title: 'Badges',
+    subtitle : "Documentation and examples for badges, our small count and labeling component.",
+    class: 'gradient gradient-purple-blue'
+} %}
+
+{% set badges = {
+    bootstrap: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+    theme: [ '1', '2', '3', '4', '5', '6'],
+    sizes: ['xs', 'sm', 'md', 'lg', 'xl'],
+    light: ['1', 'outline-1', 'outline-6', 'outline-light']
+} %}
+
+{% block main %}
+{% include "~components/badges/solid.nunjucks" %}
+{% include "~components/badges/outline.nunjucks" %}
+{% include "~components/badges/rounded.nunjucks" %}
+{% include "~components/badges/scaling.nunjucks" %}
+{% include "~components/badges/light.nunjucks" %}
+{% endblock %}

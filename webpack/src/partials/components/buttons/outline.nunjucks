@@ -1,0 +1,24 @@
+<section class="section b-b">
+    <div class="container">
+        <div class="section-heading">
+            <h2 id="examples">Outline buttons</h2>
+            <p class="lead">In need of a button, but not the hefty background colors they bring? Replace the default
+                modifier classes with the .btn-outline-* ones to remove all background images and colors on any button.
+            </p>
+        </div>
+
+        <p class="b-b pb-2 mb-5 text-secondary">Bootstrap default</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for button in buttons.bootstrap -%}
+            <button type="button" class="btn btn-outline-{{ button.name }}">{{ button.name | capitalize }}</button>
+            {%- endfor %}
+        </div>
+
+        <p class="b-b pb-2 my-5 text-secondary">Dashcore color scheme</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for button in buttons.theme -%}
+            <button type="button" class="btn btn-outline-{{ button.name }}">btn-{{ button.name }}</button>
+            {%- endfor %}
+        </div>
+    </div>
+</section>

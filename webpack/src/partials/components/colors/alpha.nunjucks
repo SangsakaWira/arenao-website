@@ -1,0 +1,27 @@
+<section class="section b-b">
+    <div class="container">
+        <div class="section-heading">
+            <h2 id="examples">Alpha colors</h2>
+        </div>
+
+        <p class="b-b pb-2 my-5 text-secondary">Text color</p>
+        {% for color in colors.theme -%}
+        <p class="bold small text-center">.color-{{ color.name }}</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for j in range(1, 10) -%}
+            <p class="small color-{{ color.name }} bg-{{ color.bg }} alpha-{{ j }} p-4">.alpha-{{ j }}</p>
+            {%- endfor %}
+        </div>
+        {%- endfor %}
+
+        <p class="b-b pb-2 my-5 text-secondary">Background color</p>
+        {% for color in colors.theme -%}
+        <p class="bold small text-center">.bg-{{ color.name }}</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for j in range(1, 10) -%}
+            <div class="small bg-{{ color.name }} color-{{ color.text }} alpha-{{ j }} p-4">.alpha-{{ j }}</div>
+            {%- endfor %}
+        </div>
+        {%- endfor %}
+    </div>
+</section>

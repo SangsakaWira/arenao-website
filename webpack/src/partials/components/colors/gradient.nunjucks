@@ -1,0 +1,20 @@
+<section class="section b-b" id="colors-gradient">
+    <div class="container">
+        <div class="section-heading">
+            <h2 id="examples">Gradients</h2>
+            <p class="lead">You can opt to use gradients background by adding <code>.gradient</code> to any element.</p>
+        </div>
+
+        <div class="row gap-y">
+            {% for i in range(1, 7) -%}
+                {% for j in range(1, 7) -%}
+                    {% if i != j %}
+                    <div class="col-6 col-lg-4">
+                        <div class="gradient gradient-{{ i }}{{ j }} color-{{ "5" if ((i == 1 and j == 6) or (i == 6 and j == 1)) else "1" }} lead p-4">.gradient-{{ i }}{{ j }}</div>
+                    </div>
+                    {% endif %}
+                {%- endfor %}
+            {%- endfor %}
+        </div>
+    </div>
+</section>

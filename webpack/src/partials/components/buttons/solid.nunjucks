@@ -1,0 +1,23 @@
+<section class="section b-b">
+    <div class="container">
+        <div class="section-heading">
+            <h2 id="examples">Default colors</h2>
+            <p class="lead">Bootstrap includes several predefined button styles, each serving its own semantic purpose,
+                with a few extras thrown in for more control.</p>
+        </div>
+
+        <p class="b-b pb-2 mb-5 text-secondary">Bootstrap default</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for button in buttons.bootstrap -%}
+            <button type="button" class="btn btn-{{ button.name }}">{{ button.name | capitalize }}</button>
+            {%- endfor %}
+        </div>
+
+        <p class="b-b pb-2 my-5 text-secondary">Dashcore color scheme</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for button in buttons.theme -%}
+            <button type="button" class="btn btn-{{ button.name }}">btn-{{ button.name }}</button>
+            {%- endfor %}
+        </div>
+    </div>
+</section>

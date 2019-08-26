@@ -1,0 +1,43 @@
+.slider-testimonials {
+  .swiper-button {
+    background-image: none;
+    border-radius: 50%;
+    background-color: $white;
+    width: 3rem;
+    height: 3rem;
+    outline: none;
+    @include center-flex();
+
+    &-prev {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    &-next {
+      right: 0;
+      transform: translateX(50%);
+    }
+  }
+
+  .image-background {
+    max-height: 500px;
+  }
+
+  .card-body {
+    padding: 4rem 2.5rem;
+  }
+
+  .divider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    transform-origin: 100% 0;
+    transform: rotate(-90deg);
+
+    div {
+      @include angled-edge("outside top", "upper right", $white, 150);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{% extends "~layout/components.nunjucks" %}
+
+{% set baseUrl = { path: "../", img: "img", blog: "blog/", components: "components/", blocks: "blocks/" } %}
+
+{% set page = {
+    title: 'Colors',
+    subtitle : "Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.",
+    class: 'gradient gradient-purple-blue'
+} %}
+
+{% set colors = {
+    bootstrap: [
+        { name: 'primary', text: 'white' },
+        { name: 'secondary', text: 'white' },
+        { name: 'success', text: 'white' },
+        { name: 'danger', text: 'white' },
+        { name: 'warning', text: 'white' },
+        { name: 'info', text: 'white' },
+        { name: 'light', text: 'dark' },
+        { name: 'dark', text: 'white' },
+        { name: 'white', text: 'dark' },
+        { name: 'transparent', text: 'dark' }
+    ],
+    text: [
+        { name: 'primary' },
+        { name: 'secondary' },
+        { name: 'success' },
+        { name: 'danger' },
+        { name: 'warning' },
+        { name: 'info' },
+        { name: 'light', bg: 'dark' },
+        { name: 'dark' },
+        { name: 'body' },
+        { name: 'muted' },
+        { name: 'white', bg: 'dark' },
+        { name: 'black-50' },
+        { name: 'white-50', bg: 'dark' }
+    ],
+    theme: [
+        { name: '1', text: '5', bg: 'dark' },
+        { name: '2', text: '1' },
+        { name: '3', text: '1' },
+        { name: '4', text: '1' },
+        { name: '5', text: '1' },
+        { name: '6', text: '5', bg: 'dark' }
+    ]
+} %}
+
+{% block main %}
+{% include "~components/colors/text.nunjucks" %}
+{% include "~components/colors/default.nunjucks" %}
+{% include "~components/colors/gradient.nunjucks" %}
+{% include "~components/colors/alpha.nunjucks" %}
+{% endblock %}
